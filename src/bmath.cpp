@@ -1,12 +1,8 @@
 #include "bmath.h"
+#include <math.h>
 // TODO: is_positive, is_negative, is_even, is_odd
-//
-// BASIC EVALUATIONS
-//
+using namespace bmath;
 
-//
-// 
-//
 long long bmath::distance(long long n1, long long n2)
 {
     // calculate the distance between two numbers
@@ -38,7 +34,7 @@ double bmath::average(std::vector<int> numbers)
     std::vector<double> d_vector;
     for (int i = 0; i < numbers.size(); ++i)
         d_vector.push_back((double)numbers[i]);
-    return bmath::average(d_vector);
+    return average(d_vector);
 }
 
 double bmath::average(std::vector<double> numbers)
@@ -65,15 +61,15 @@ std::vector<int> bmath::find_factors(int n)
     // find all positive factor of a number
     std::vector<int> factors;
     for (int i = 1; i <= n; ++i)
-        if (bmath::is_factor(i, n)) factors.push_back(i);
+        if (is_factor(i, n)) factors.push_back(i);
     return factors;
 }
 
 // TODO: implement a common_factors with multiple arguments entry or vector
 std::vector<int> bmath::common_factors(int n1, int n2)
 {
-    std::vector<int> n1_fac = bmath::find_factors(n1);
-    std::vector<int> n2_fac = bmath::find_factors(n2);
+    std::vector<int> n1_fac = find_factors(n1);
+    std::vector<int> n2_fac = find_factors(n2);
     std::vector<int> common_factors;
     for (int x : n1_fac)
         for (int y : n2_fac)
@@ -84,7 +80,7 @@ std::vector<int> bmath::common_factors(int n1, int n2)
 // TODO: implement a gcf with multiple arguments entry or vector
 int bmath::gcf(int n1, int n2)
 {
-    std::vector<int> common_factor = bmath::common_factors(n1, n2);
+    std::vector<int> common_factor = common_factors(n1, n2);
     return common_factor[common_factor.size() - 1];
 }
 int bmath::eucl_gcf(int n1, int n2)
@@ -152,7 +148,6 @@ std::map<int, bool> bmath::sieve_of_eratosthenes_table(int n)
 
 std::map<int, bool> bmath::find_primes(int n)
 {
-    // makes a map of prime numbers until n
     return sieve_of_eratosthenes_table(n);
 }
 
@@ -172,26 +167,10 @@ bool bmath::is_prime(int n)
     }
 }
 
-bool bmath::is_composite(int n)
-{
-    // composite is a non-prime number
-    return !bmath::is_prime(n);
-}
-
-bool bmath::is_coprime(int n1, int n2)
-{
-    // coprime is a relatively prime
-    if (bmath::gcf(n1, n2) == 1) return true;
-    else return false;
-}
-double bmath::square(double n)
-{
-    return n * n;
-}
-double bmath::cube(double n)
-{
-    return n * n * n;
-}
+bool bmath::is_composite(int n) { return !is_prime(n); }
+bool bmath::is_coprime(int n1, int n2) { return gcf(n1, n2); }
+double bmath::square(double n) { return n * n; }
+double bmath::cube(double n) { return n * n * n; }
 double bmath::power(double base, double expo)
 {
     double temp = base;

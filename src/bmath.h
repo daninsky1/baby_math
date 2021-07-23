@@ -6,8 +6,9 @@
 #include <map>			// std::map
 #include <string>		// std::string
 #include <limits>		// std::numeric_limits
-
-
+//
+// BASIC EVALUATIONS
+//
 namespace bmath
 {
     // my basic math library
