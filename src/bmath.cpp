@@ -1,30 +1,20 @@
 #include "bmath.h"
 #include <math.h>
+#include <limits>
+#include <climits>
+#include <exception>
+#include <bit>
 // TODO: is_positive, is_negative, is_even, is_odd
 using namespace bmath;
 
-long long bmath::distance(long long n1, long long n2)
-{
-    // calculate the distance between two numbers
-    return std::abs(n1 - n2);
-}
+long long bmath::distance(long long n1, long long n2) { return std::abs(n1 - n2); }
 
-long long bmath::absolute(long long n, bool bitmask = false)
+int bmath::absolute(int n)
 {
-    // return the absolute value of a number
-    if (bitmask) {
-        // TODO: bitmask equivalent
-        if (n < 0)
-            return (-1) * n;
-        else
-            return n;
-    }
-    else {
-        if (n < 0)
-            return (-1) * n;
-        else
-            return n;
-    }
+    if (n == std::numeric_limits<int>::lowest())
+        throw std::range_error("Cannot compute INT_MIN.");
+    int mask = n >> (sizeof(int)*CHAR_BIT - 1);
+    return (mask + n)^mask;
 }
 //
 // AVERAGE NUMBERS

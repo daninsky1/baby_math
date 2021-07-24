@@ -19,7 +19,7 @@ namespace bmath
     // unsigned long long int
     
     long long distance(long long n1, long long n2);
-    long long absolute(long long n, bool bitmask);
+    int absolute(int n);
     double average(std::vector<int> numbers);
     double average(std::vector<double> numbers);
     bool is_factor(int n, int of_n);
