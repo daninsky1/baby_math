@@ -5,9 +5,9 @@
 #include <exception>
 #include <bit>
 // TODO: is_positive, is_negative, is_even, is_odd
+// TODO: substitute vector parameter to any iterable container
+// and add function overload to accept variable args
 using namespace bmath;
-
-long long bmath::distance(long long n1, long long n2) { return std::abs(n1 - n2); }
 
 int bmath::absolute(int n)
 {
@@ -16,6 +16,9 @@ int bmath::absolute(int n)
     int mask = n >> (sizeof(int)*CHAR_BIT - 1);
     return (mask + n)^mask;
 }
+
+int bmath::distance(int n1, int n2) { return std::abs(n1 - n2); }
+
 //
 // AVERAGE NUMBERS
 //

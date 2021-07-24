@@ -18,8 +18,8 @@ namespace bmath
     // unsigned int
     // unsigned long long int
     
-    long long distance(long long n1, long long n2);
     int absolute(int n);
+    int distance(int n1, int n2);
     double average(std::vector<int> numbers);
     double average(std::vector<double> numbers);
     bool is_factor(int n, int of_n);
