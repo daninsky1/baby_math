@@ -19,7 +19,15 @@ namespace bmath
     // unsigned long long int
     
     int absolute(int n);
-    int distance(int n1, int n2);
+    unsigned int distance(int n1, int n2);
+    int square(int n);
+    int cube(int n);
+    int power(int base, int exponent);
+    double squared(double n);
+    double cubed(double n);
+    double powerd(double base, double exponent);
+    int factorial(int n);
+    
     double average(std::vector<int> numbers);
     double average(std::vector<double> numbers);
     bool is_factor(int n, int of_n);
@@ -35,7 +43,5 @@ namespace bmath
     bool is_prime(int n);
     bool is_composite(int n);
     bool is_coprime(int n1, int n2);
-    double square(double n);
-    double cube(double n);
-    double power(double base, double expo);
+
 }

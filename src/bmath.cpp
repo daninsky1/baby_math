@@ -17,15 +17,61 @@ int bmath::absolute(int n)
     return (mask + n)^mask;
 }
 
-int bmath::distance(int n1, int n2) { return std::abs(n1 - n2); }
+unsigned int bmath::distance(int n1, int n2)
+{
+    long long n1ll = static_cast<long long>(n1);
+    long long n2ll = static_cast<long long>(n2);
+    unsigned int r = static_cast<unsigned int>(std::abs(n1ll - n2ll));
+    return r;
+}
 
-//
-// AVERAGE NUMBERS
-//
+int bmath::square(int n)
+{
+    static constexpr int SQ_INT_MAX = 46341;
+    if (n > SQ_INT_MAX) throw std::range_error("return type int overflow");
+    return n*n;
+}
+
+int bmath::cube(int n)
+{
+    static constexpr int CB_INT_MAX = 1290;
+    if (n > CB_INT_MAX) throw std::range_error("return type int overflow");
+    return n*n*n;
+}
+
+int bmath::power(int base, int exponent)
+{
+    int temp = base;
+    for (int i = 1; i < exponent; ++i) temp *= base;
+    return temp;
+}
+// TODO: add error checking in double implementations of square, cube and po
+double bmath::squared(double n)
+{
+    return n*n;
+}
+
+double bmath::cubed(double n)
+{
+    return n*n*n;
+}
+
+double bmath::powerd(double base, double exponent)
+{
+    double temp = base;
+    for (int i = 1; i < exponent; ++i) temp *= base;
+    return temp;
+}
+
+int factorial(int n)
+{
+    if (n == 0) return 1;
+}
+
 double bmath::average(std::vector<int> numbers)
 {
     std::vector<double> d_vector;
-    for (int i = 0; i < numbers.size(); ++i)
+    for (unsigned int i = 0; i < numbers.size(); ++i)
         d_vector.push_back((double)numbers[i]);
     return average(d_vector);
 }
@@ -34,7 +80,7 @@ double bmath::average(std::vector<double> numbers)
 {
     double sum = 0;
     size_t n_size = numbers.size();
-    for (int i = 0; i < n_size; ++i) {
+    for (unsigned int i = 0; i < n_size; ++i) {
         sum += numbers[i];
     }
     return sum / n_size;
@@ -162,11 +208,4 @@ bool bmath::is_prime(int n)
 
 bool bmath::is_composite(int n) { return !is_prime(n); }
 bool bmath::is_coprime(int n1, int n2) { return gcf(n1, n2); }
-double bmath::square(double n) { return n * n; }
-double bmath::cube(double n) { return n * n * n; }
-double bmath::power(double base, double expo)
-{
-    double temp = base;
-    for (int i = 1; i < expo; ++i) temp *= base;
-    return temp;
-}
+
