@@ -20,12 +20,19 @@ namespace bmath
     
     int absolute(int n);
     unsigned int distance(int n1, int n2);
-    int square(int n);
+    
+    uint64_t square(unsigned int n);
     int cube(int n);
-    int power(int base, int exponent);
+    int64_t naive_power(int32_t base, uint32_t exponent);
+    int64_t power(int32_t base, uint32_t exponent);
+    int64_t iter_power(int32_t base, uint32_t exponent);
     double squared(double n);
     double cubed(double n);
-    double powerd(double base, double exponent);
+    double powerd(double base, double number);
+    double log(double base, double value);
+    double sqrt(double n);
+    double cbrt(double n);
+    
     int factorial(int n);
     
     double average(std::vector<int> numbers);

@@ -1,9 +1,10 @@
 #include "bmath.h"
-#include <math.h>
+#include <cmath>
 #include <limits>
 #include <climits>
 #include <exception>
 #include <bit>
+#include <vector>
 // TODO: is_positive, is_negative, is_even, is_odd
 // TODO: substitute vector parameter to any iterable container
 // and add function overload to accept variable args
@@ -24,12 +25,14 @@ unsigned int bmath::distance(int n1, int n2)
     unsigned int r = static_cast<unsigned int>(std::abs(n1ll - n2ll));
     return r;
 }
-
-int bmath::square(int n)
+/*
+* POTENTIATION AND DIVISIBILITY
+*/
+uint64_t bmath::square(unsigned int n)
 {
-    static constexpr int SQ_INT_MAX = 46341;
-    if (n > SQ_INT_MAX) throw std::range_error("return type int overflow");
-    return n*n;
+    uint64_t result = static_cast<uint64_t>(n);
+    result*=result;
+    return result;
 }
 
 int bmath::cube(int n)
@@ -39,12 +42,39 @@ int bmath::cube(int n)
     return n*n*n;
 }
 
-int bmath::power(int base, int exponent)
+int64_t bmath::naive_power(int32_t base, uint32_t exponent)
 {
-    int temp = base;
-    for (int i = 1; i < exponent; ++i) temp *= base;
+    // brute-force power
+    if (!exponent) return 1;    // exponent == 0
+    if (exponent == 1) return base;
+    int64_t temp = base;
+    for (uint32_t i = 1; i < exponent; ++i) temp *= base;
     return temp;
 }
+
+int64_t bmath::power(int32_t base, uint32_t exponent)
+{
+    // binary power
+    // only positive exponent are suported
+    if (!exponent) return 1;    // exponent == 0
+    if (exponent == 1) return base;
+    int64_t temp = power(base, exponent / 2);
+    int64_t result = temp * temp;
+    if (exponent % 2) result *= base;
+    return result;
+}
+int64_t bmath::iter_power(int32_t base, uint32_t exponent)
+{
+    // iteration power
+    int64_t result = 1;
+    while (exponent) {
+        if (exponent%2 ) result *= base;
+        base *= base;
+        exponent /= 2;
+    }
+    return result;
+}
+
 // TODO: add error checking in double implementations of square, cube and po
 double bmath::squared(double n)
 {
@@ -59,8 +89,32 @@ double bmath::cubed(double n)
 double bmath::powerd(double base, double exponent)
 {
     double temp = base;
-    for (int i = 1; i < exponent; ++i) temp *= base;
+    if (exponent < 1)
+        for (double i = exponent; i > 1; i+=i) temp *= base;
+    else 
+        for (unsigned int i = 1; i < exponent; ++i) temp *= base;
     return temp;
+}
+
+double log(double base, double value)
+{
+    // TODO: Implement this logarithm
+    if (base == 0.0) return 0;
+    else if (base < 0) throw std::invalid_argument("");
+}
+
+double bmath::sqrt(double n)
+{
+    // heron's method
+    if (n < 1) throw std::range_error("Must be a non-zero positive number >= 1.");
+    static const std::vector<uint64_t> LUT; 
+    int estimate = 0;
+    
+}
+
+double bmath::cbrt(double n)
+{
+    
 }
 
 int factorial(int n)
