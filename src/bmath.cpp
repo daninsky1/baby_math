@@ -5,6 +5,8 @@
 #include <exception>
 #include <bit>
 #include <vector>
+#include <algorithm>
+#include <map>
 // TODO: is_positive, is_negative, is_even, is_odd
 // TODO: substitute vector parameter to any iterable container
 // and add function overload to accept variable args
@@ -103,14 +105,52 @@ double log(double base, double value)
     else if (base < 0) throw std::invalid_argument("");
 }
 
-double bmath::sqrt(double n)
+double bmath::sqrt(int n)
 {
-    // heron's method
+    // Heron's method square root 
     if (n < 1) throw std::range_error("Must be a non-zero positive number >= 1.");
-    static const std::vector<uint64_t> LUT; 
-    int estimate = 0;
+    // first number, second squared number
+    std::pair<int, int> min_guess{0, 0};
+    std::pair<int, int> max_guess{0, 0};
+    int i = 1;
+    int sq;
+    while (true) {
+        sq = square(i);
+        if (sq < n) {
+            min_guess.first = i;
+            min_guess.second = sq;
+        }
+        else if (sq > n) {
+            max_guess.first = i;
+            max_guess.second = sq;
+            break;
+        }
+        else return i;
+        ++i;
+    }
     
+    std::pair<int, int> closest_guess{0, 0};
+    if (distance(min_guess.second, n) < distance(max_guess.second, n)) 
+        closest_guess = min_guess;
+    else
+        closest_guess = max_guess;
+        
+    double a = static_cast<double>(closest_guess.first);
+
+    constexpr int iter = 4;
+    constexpr double half = 0.5;
+    double result = 0;
+    
+    for (int i = 0; i < iter; ++i) {
+        result = half*(a+n/a);
+        a = result;
+    }
+    
+    return result;
 }
+
+// TODO: implement reciprocal square root
+double rsqrt(int n) { return 0.0; }
 
 double bmath::cbrt(double n)
 {

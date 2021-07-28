@@ -30,7 +30,8 @@ namespace bmath
     double cubed(double n);
     double powerd(double base, double number);
     double log(double base, double value);
-    double sqrt(double n);
+    double sqrt(int n);
+    double rsqrt(int n);
     double cbrt(double n);
     
     int factorial(int n);
