@@ -11,7 +11,7 @@
 // bmath::absolute
 TEST(absoluteTest, HandlesIntMin)
 {
-    EXPECT_ANY_THROW(bmath::absolute(INT_MIN));
+    EXPECT_ANY_THROW(bmath::absolute(INT64_MIN));
 }
 TEST(absoluteTest, SanityCheck)
 {
@@ -30,36 +30,37 @@ TEST(absoluteTest, SanityCheck)
 // bmath::distance
 TEST(distanceTest, SanityCheck)
 {
-    EXPECT_EQ(bmath::distance(-2, 2), 4);
-    EXPECT_EQ(bmath::distance(-21, 21), 21*2);
-    EXPECT_EQ(bmath::distance(-214, 214), 214*2);
-    EXPECT_EQ(bmath::distance(-2147, 2147), 2147*2);
-    EXPECT_EQ(bmath::distance(-21474, 21474), 21474*2);
-    EXPECT_EQ(bmath::distance(-214748, 214748), 214748*2);
-    EXPECT_EQ(bmath::distance(-2147483, 2147483), 2147483*2);
-    EXPECT_EQ(bmath::distance(-21474836, 21474836), 21474836*2);
+    EXPECT_EQ(bmath::distance(2, 2), 0);
     EXPECT_EQ(bmath::distance(-214748364, 214748364), 214748364*2);
-    EXPECT_EQ(bmath::distance(INT_MIN, INT_MAX), UINT_MAX);
+    // EXPECT_EQ(bmath::distance(INT64_MIN, INT64_MAX), UINT64_MAX);
 }
 
 // bmath::square bmath::cube
-TEST(squareTest, handlesSquareIntMax) { EXPECT_ANY_THROW(bmath::square(46342)); }
-TEST(cubeTest, handlesCubeIntMax) { EXPECT_ANY_THROW(bmath::cube(1291)); }
+TEST(squareTest, handlesSquareIntMax) {
+    EXPECT_ANY_THROW(bmath::square(static_cast<int64_t>(UINT32_MAX)+1));
+    constexpr int64_t NUINT32_RANGE = static_cast<int64_t>(UINT32_MAX)*-1;     // "negative" uint 32 range size
+    EXPECT_ANY_THROW(bmath::square(NUINT32_RANGE-1));
+}
+TEST(cubeTest, handlesCubeIntMax) {
+    // TODO: update test
+    static constexpr int CB_PMAX_INDEX = 2'097'151;     // positive max
+    static constexpr int CB_NMAX_INDEX = -2'097'152;     //
+    EXPECT_ANY_THROW(bmath::cube(CB_PMAX_INDEX+1));
+    EXPECT_ANY_THROW(bmath::cube(CB_NMAX_INDEX-1));
+    
+}
 
-
-
-
-
+TEST(benchmarkNaivePower, benchmark)
+{
+    
+}
 
 void avr_nums()
 {
-    std::vector<int> numbers = { 76, 70, 66, 75, 81 };
-    std::cout << bmath::average(numbers) << '\n';
-    std::vector<int> numbers2 = { 3, 2, 7, 8 };
-    std::cout << bmath::average(numbers2) << '\n';
-    std::vector<int> numbers3 = { -7, 5, -9, 4 };
-    std::cout << bmath::average(numbers3) << std::endl;
-    std::vector<int> numbers4 = { 0, 1, 3, 7, 19 };
+    std::cout << bmath::average(76, 70, 66, 75, 81) << '\n';
+    std::cout << bmath::average(3, 2, 7, 8 ) << '\n';
+    std::cout << bmath::average(-7, 5, -9, 4) << '\n';
+    std::cout << bmath::average(0, 1, 3, 7, 19) << '\n';
 }
 
 void find_factors()
