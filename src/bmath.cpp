@@ -1,12 +1,4 @@
 #include "bmath.h"
-#include <cmath>
-#include <limits>
-#include <climits>
-#include <exception>
-#include <bit>
-#include <vector>
-#include <algorithm>
-#include <map>
 // TODO: is_positive, is_negative, is_even, is_odd
 // TODO: substitute vector parameter to any iterable container
 // and add function overload to accept variable args
@@ -98,17 +90,17 @@ double bmath::powerd(double base, double exponent)
     return temp;
 }
 
-double log(double base, double value)
+double bmath::log(double base, double value)
 {
     // TODO: Implement this logarithm
     if (base == 0.0) return 0;
     else if (base < 0) throw std::invalid_argument("");
 }
 
-double bmath::sqrt(int n)
+double bmath::sqrt(int radicand)
 {
     // Heron's method square root 
-    if (n < 1) throw std::range_error("Must be a non-zero positive number >= 1.");
+    if (radicand < 1) throw std::range_error("Must be a non-zero positive number >= 1.");
     // first number, second squared number
     std::pair<int, int> min_guess{0, 0};
     std::pair<int, int> max_guess{0, 0};
@@ -116,11 +108,11 @@ double bmath::sqrt(int n)
     int sq;
     while (true) {
         sq = square(i);
-        if (sq < n) {
+        if (sq < radicand) {
             min_guess.first = i;
             min_guess.second = sq;
         }
-        else if (sq > n) {
+        else if (sq > radicand) {
             max_guess.first = i;
             max_guess.second = sq;
             break;
@@ -130,7 +122,7 @@ double bmath::sqrt(int n)
     }
     
     std::pair<int, int> closest_guess{0, 0};
-    if (distance(min_guess.second, n) < distance(max_guess.second, n)) 
+    if (distance(min_guess.second, radicand) < distance(max_guess.second, radicand)) 
         closest_guess = min_guess;
     else
         closest_guess = max_guess;
@@ -142,7 +134,7 @@ double bmath::sqrt(int n)
     double result = 0;
     
     for (int i = 0; i < iter; ++i) {
-        result = half*(a+n/a);
+        result = half*(a+radicand/a);
         a = result;
     }
     
@@ -150,34 +142,20 @@ double bmath::sqrt(int n)
 }
 
 // TODO: implement reciprocal square root
-double rsqrt(int n) { return 0.0; }
+double bmath::rsqrt(int radicand) { return 0.0; }
 
-double bmath::cbrt(double n)
+// TODO: implement cubic root
+double bmath::cbrt(double radicand)
 {
-    
+    return 0.0;
 }
+// TODO: implement root of nth number
+double bmath::radix(int index, int radicand) { return 0.0; }
 
-int factorial(int n)
+// TODO: implement factorial
+uint64_t bmath::factorial(unsigned int n)
 {
     if (n == 0) return 1;
-}
-
-double bmath::average(std::vector<int> numbers)
-{
-    std::vector<double> d_vector;
-    for (unsigned int i = 0; i < numbers.size(); ++i)
-        d_vector.push_back((double)numbers[i]);
-    return average(d_vector);
-}
-
-double bmath::average(std::vector<double> numbers)
-{
-    double sum = 0;
-    size_t n_size = numbers.size();
-    for (unsigned int i = 0; i < n_size; ++i) {
-        sum += numbers[i];
-    }
-    return sum / n_size;
 }
 //
 // FACTORING
