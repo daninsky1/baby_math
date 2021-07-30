@@ -9,30 +9,38 @@
 #include <gtest/gtest.h>
 
 // bmath::absolute
-TEST(absoluteTest, HandlesIntMin)
-{
-    EXPECT_ANY_THROW(bmath::absolute(INT64_MIN));
-}
 TEST(absoluteTest, SanityCheck)
 {
-    EXPECT_EQ(bmath::absolute(-1), 1);
-    EXPECT_EQ(bmath::absolute(-12), 12);
-    EXPECT_EQ(bmath::absolute(-123), 123);
-    EXPECT_EQ(bmath::absolute(-1234), 1234);
-    EXPECT_EQ(bmath::absolute(-12345), 12345);
-    EXPECT_EQ(bmath::absolute(-214748), 214748);
-    EXPECT_EQ(bmath::absolute(-2147483), 2147483);
-    EXPECT_EQ(bmath::absolute(-21474836), 21474836);
     EXPECT_EQ(bmath::absolute(-214748364), 214748364);
     EXPECT_EQ(bmath::absolute(-2147483647), 2147483647);
+    // test max capacity
+    EXPECT_EQ(bmath::absolute(INT64_MIN), static_cast<uint64_t>(INT64_MAX+1));
+    EXPECT_EQ(bmath::absolute(INT64_MAX), INT64_MAX);
 }
 
 // bmath::distance
 TEST(distanceTest, SanityCheck)
 {
-    EXPECT_EQ(bmath::distance(2, 2), 0);
-    EXPECT_EQ(bmath::distance(-214748364, 214748364), 214748364*2);
-    // EXPECT_EQ(bmath::distance(INT64_MIN, INT64_MAX), UINT64_MAX);
+    EXPECT_EQ(bmath::distance(20, 20), 0);
+    
+    EXPECT_EQ(bmath::distance(2, 4), 2);    // positives
+    EXPECT_EQ(bmath::distance(4, 2), 2);
+    
+    EXPECT_EQ(bmath::distance(-2, -4), 2);  // negatives
+    EXPECT_EQ(bmath::distance(-4, -2), 2);
+    
+    EXPECT_EQ(bmath::distance(-2, 4), 6);   // negatives and positives
+    EXPECT_EQ(bmath::distance(2, -4), 6);
+    
+    // test large numbers
+    EXPECT_EQ(bmath::distance(INT64_MAX, 0), INT64_MAX);
+    EXPECT_EQ(bmath::distance(INT64_MAX, 0), INT64_MAX);
+    
+    EXPECT_EQ(bmath::distance(INT64_MIN, 0), static_cast<uint64_t>(INT64_MIN)*-1);
+    EXPECT_EQ(bmath::distance(0, INT64_MIN), static_cast<uint64_t>(INT64_MIN)*-1);
+    
+    EXPECT_EQ(bmath::distance(INT64_MIN, INT64_MAX), UINT64_MAX);    // test capacity
+    EXPECT_EQ(bmath::distance(INT64_MAX,INT64_MIN), UINT64_MAX); 
 }
 
 // bmath::square bmath::cube
@@ -142,12 +150,6 @@ void powers()
     std::cout << bmath::power(1, 7) << '\n';
     std::cout << bmath::power(2.7, 4) << '\n';
     std::cout << bmath::power(1.3, 5) << '\n';
-}
-
-// Google test test
-TEST(HelloTest, BasicAssertions) {
-    EXPECT_STRNE("daniel", "marina");
-    EXPECT_EQ(7*6, 42);
 }
 
 // CODE SNIPPETS
