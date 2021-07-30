@@ -4,36 +4,59 @@
 // and add function overload to accept variable args
 using namespace bmath;
 
-int bmath::absolute(int n)
+uint64_t bmath::absolute(int64_t n)
 {
-    if (n == std::numeric_limits<int>::lowest())
-        throw std::range_error("Cannot compute INT_MIN.");
-    int mask = n >> (sizeof(int)*CHAR_BIT - 1);
-    return (mask + n)^mask;
+    if (n == INT64_MIN)
+        return static_cast<uint64_t>(n);
+    int64_t mask = n >> (sizeof(int64_t)*CHAR_BIT - 1);
+    int64_t result = (mask + n)^mask;
+    return result;
 }
 
-unsigned int bmath::distance(int n1, int n2)
+int sign(int64_t n)
 {
-    long long n1ll = static_cast<long long>(n1);
-    long long n2ll = static_cast<long long>(n2);
-    unsigned int r = static_cast<unsigned int>(std::abs(n1ll - n2ll));
-    return r;
+    if (n > 0) return 1;
+    else if (n < 0) return -1;
+    else return 0;
+}
+
+uint64_t bmath::distance(int64_t n1, int64_t n2)
+{
+    uint64_t result = 0;
+    if (sign(n1) != 0 && sign(n1) != sign(n2)) {
+        uint64_t lln1 = 0;
+        uint64_t lln2 = 0;
+        lln1 = absolute(n1);
+        lln2 = absolute(n2);
+        result = lln1 + lln2;
+        return result;
+    }
+    else {
+        result = absolute(n1 - n2);
+        return result;
+    }
 }
 /*
 * POTENTIATION AND DIVISIBILITY
 */
-uint64_t bmath::square(unsigned int n)
+uint64_t bmath::square(int64_t base)
 {
-    uint64_t result = static_cast<uint64_t>(n);
+    constexpr int64_t NUINT32_RANGE = static_cast<int64_t>(UINT32_MAX)*-1; // "negative" 32 uint range size
+    if (base > UINT32_MAX || base < NUINT32_RANGE)
+        throw std::range_error("Cannot compute more than 4294967295 negative or positive.");
+    uint64_t result = static_cast<uint64_t>(base);
     result*=result;
     return result;
 }
 
-int bmath::cube(int n)
+int64_t bmath::cube(int32_t base)
 {
-    static constexpr int CB_INT_MAX = 1290;
-    if (n > CB_INT_MAX) throw std::range_error("return type int overflow");
-    return n*n*n;
+    static constexpr int CB_PMAX_INDEX = 2'097'151;     // positive max
+    static constexpr int CB_NMAX_INDEX = -2'097'152;     // negative max
+    if (base > CB_PMAX_INDEX || base < CB_NMAX_INDEX) throw std::range_error("Overflow.");
+    int64_t result = static_cast<int64_t>(base);
+    result = result*result*result;
+    return result;
 }
 
 int64_t bmath::naive_power(int32_t base, uint32_t exponent)
@@ -41,9 +64,9 @@ int64_t bmath::naive_power(int32_t base, uint32_t exponent)
     // brute-force power
     if (!exponent) return 1;    // exponent == 0
     if (exponent == 1) return base;
-    int64_t temp = base;
-    for (uint32_t i = 1; i < exponent; ++i) temp *= base;
-    return temp;
+    int64_t result = base;
+    for (uint32_t i = 1; i < exponent; ++i) result *= base;
+    return result;
 }
 
 int64_t bmath::power(int32_t base, uint32_t exponent)

@@ -22,14 +22,18 @@ namespace bmath
     // unsigned int
     // unsigned long long int
     
-    int absolute(int n);
-    unsigned int distance(int n1, int n2);
+    uint64_t absolute(int64_t n);
+    uint64_t distance(int64_t n1, int64_t n2);
     
-    uint64_t square(unsigned int n);
-    int cube(int n);
+    uint64_t square(int64_t base);
+    int64_t cube(int32_t base);
     int64_t naive_power(int32_t base, uint32_t exponent);
     int64_t power(int32_t base, uint32_t exponent);
     int64_t iter_power(int32_t base, uint32_t exponent);
+    
+    
+    
+    
     double squared(double n);
     double cubed(double n);
     double powerd(double base, double number);
