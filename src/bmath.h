@@ -11,6 +11,14 @@
 #include <bit>
 #include <algorithm>
 //
+// CONSTANTS
+//
+#ifndef DISABLE_BMATH_CONSTS
+#define TWO_PI      3.141592653589793238462643383279502884*2    // pi*2
+#define PI          3.141592653589793238462643383279502884      // pi
+#define HALF_PI     1.570796326794896619231321691639751442      // pi/2
+#endif
+//
 // BASIC EVALUATIONS
 //
 namespace bmath
