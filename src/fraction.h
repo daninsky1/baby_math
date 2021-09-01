@@ -1,6 +1,7 @@
 #pragma once
-#include <map>
 
+#include <map>
+#include <ostream>
 
 namespace bmath
 {
@@ -39,7 +40,6 @@ namespace bmath
         void simplify();
         Fraction reciprocal();
         double decimal();
-        std::string strfy() const;
     };
     double reciprocalf(double frac);	// reciprocal float
 }    

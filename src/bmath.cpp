@@ -1,4 +1,5 @@
 #include "bmath.h"
+
 // TODO: is_positive, is_negative, is_even, is_odd
 // TODO: substitute vector parameter to any iterable container
 // and add function overload to accept variable args

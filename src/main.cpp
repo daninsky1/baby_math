@@ -1,31 +1,48 @@
-#include <iostream>
 #include <bitset>
 #include <vector>
-#include "printv.h"
-#include "bmath.h"
-#include "fraction.h"
 #include <climits>
 #include <cmath>
 #include <ctime>
 #include <string>
+#include <type_traits>
+
+#include "printv.h"
+#include "bmath.h"
+#include "fraction.h"
 // #include "../BabyMathConfig.h"
 
+void sq_max_test();
+
+int main(void)
+{
+    using namespace dsk;
+    using namespace std;
+    int n = 36;
+    std::cout << n << " = " << bmath::sqrt(n) << '\n';
+    
+}
+//
+// MANUAL TESTS
+//
 int dig_len(uint64_t n)
 {
     std::string s = std::to_string(n);
     return s.size();
 }
-void sq_max_test();
 
-int main()
+void average_test()
 {
-    using namespace dsk;
-    using namespace std;
-    // for (int i = 1'000'000'000; i < 5'000'000'000; ++i) {
-    //     std::cout << i << " - " << bmath::square(i)
-    //               << " - " << (bmath::square(i) - UINT64_MAX) << '\n';
-    // }
-    sq_max_test();
+    char i = 'a';
+    double d = 20.00;
+    
+    
+    std::cout << std::is_convertible<char, int>::value << '\n';
+    
+    std::cout << bmath::average(
+        'a', 10, 12, 13, 13, 13, 15, 15, 16, 16, 18, 22, 23, 24, 24, 25
+    ) << '\n';
+    
+    std::cout << sqrt('a') << '\n';
 }
 
 void sq_max_test()
