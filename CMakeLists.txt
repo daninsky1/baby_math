@@ -18,19 +18,20 @@ endif()
 
 # project generated libs
 add_library(baby_math
-            src/bmath.cpp
-            src/bmath.h)
-add_library(fraction
-            src/fraction.cpp
-            src/fraction.h)
+    src/bmath.cpp src/bmath.h
+    src/fraction.cpp src/fraction.h)
 
 # main to manual test and debugging
 add_executable(main src/main.cpp)
 target_link_libraries(main PUBLIC baby_math)
-add_custom_target(run
-                  COMMAND main
-                  DEPENDS main
-                  WORKING_DIRECTORY ${CMAKE_PROJECT_DIR})
+
+# custom target for make files
+if(UNIX)
+    add_custom_target(run
+                      COMMAND main
+                      DEPENDS main
+                      WORKING_DIRECTORY ${CMAKE_PROJECT_DIR})
+endif()
 
 # add gtest
 include(FetchContent)

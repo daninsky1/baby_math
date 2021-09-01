@@ -1,3 +1,4 @@
 # ignore build dir and vs code dir
 build/
+msvc/
 .vs/
