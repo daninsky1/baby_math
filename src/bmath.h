@@ -31,6 +31,7 @@ namespace bmath
     // unsigned long long int
     
     uint64_t absolute(int64_t n);
+    int64_t inverse(int64_t n);
     uint64_t distance(int64_t n1, int64_t n2);
     
     uint64_t square(int64_t base);
@@ -81,7 +82,7 @@ double average_impl(int& count, double& sum, const Head& head, const Tail& ...ta
 {
     sum += head;
     count++;
-    average_impl(count, sum, tail...);
+    return average_impl(count, sum, tail...);
 }
 
 template<class ... Ts>

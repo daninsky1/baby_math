@@ -1,0 +1,2 @@
+#define BabyMath_VERSION_MAJOR @BabyMath_VERSION_MAJOR@
+#define BabyMath_VERSION_MINOR @BabyMath_VERSION_MINOR@

@@ -3,7 +3,8 @@
 using namespace bmath;
 
 bmath::Fraction::Fraction(int numerator, int denominator, int mixed_num)
-    :m_numerator{ numerator }, m_denominator{ denominator }, m_mixed_num{ mixed_num }, m_decimal{numerator / denominator}
+    :m_numerator{ numerator }, m_denominator{ denominator }, 
+    m_mixed_num{ mixed_num }, m_decimal{static_cast<double>(numerator / denominator)}
 {
 }
 

@@ -13,13 +13,21 @@
 
 void sq_max_test();
 
+std::bitset<8> tobyte(int v)
+{
+    return std::bitset<8>{static_cast<uint32_t>(v)};
+}
+
 int main(void)
 {
-    using namespace dsk;
-    using namespace std;
-    int n = 36;
-    std::cout << n << " = " << bmath::sqrt(n) << '\n';
-    
+    int abs = bmath::absolute(-2);
+
+    int value = 1;
+    std::cout << value << std::endl;
+    value = bmath::inverse(value);
+    std::cout << value << std::endl;
+    value = bmath::inverse(value);
+    std::cout << value << std::endl;
 }
 //
 // MANUAL TESTS

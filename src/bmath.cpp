@@ -9,9 +9,19 @@ uint64_t bmath::absolute(int64_t n)
 {
     if (n == INT64_MIN)
         return static_cast<uint64_t>(n);
-    int64_t mask = n >> (sizeof(int64_t)*CHAR_BIT - 1);
-    int64_t result = (mask + n)^mask;
+    int64_t sign_mak = n >> (sizeof(int64_t)*CHAR_BIT - 1);
+    int64_t result = (sign_mak + n)^sign_mak;
     return result;
+}
+
+int64_t bmath::inverse(int64_t n)
+{
+    // Two's complement inverse function
+    // The inversion of a number can be achieved mathematically by multiplying
+    // a integer number by -1;
+    if (n == INT64_MIN || n == 0)
+        return 0;
+    return (~n)+1;
 }
 
 int sign(int64_t n)
