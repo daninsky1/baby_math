@@ -1,0 +1,370 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	E:/dev/baby_math/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/6a03e55e/
+CB_NMAX_INDEX	./bmath.cpp	/^    static constexpr int CB_NMAX_INDEX = -2'097'152;     \/\/ negative max$/;"	l	function:bmath::cube	typeref:typename:int	file:
+CB_PMAX_INDEX	./bmath.cpp	/^    static constexpr int CB_PMAX_INDEX = 2'097'151;     \/\/ positive max$/;"	l	function:bmath::cube	typeref:typename:int	file:
+Fraction	./fraction.cpp	/^bmath::Fraction::Fraction(int numerator, int denominator, int mixed_num)$/;"	f	class:bmath::Fraction	signature:(int numerator,int denominator,int mixed_num)
+Fraction	./fraction.h	/^        Fraction(int numerator, int denominator, int mixed_num = 0);$/;"	p	class:bmath::Fraction	access:public	signature:(int numerator,int denominator,int mixed_num=0)
+Fraction	./fraction.h	/^    class Fraction {$/;"	c	namespace:bmath
+HALF_PI	./bmath.h	/^constexpr double HALF_PI = 1.570796326794896619231321691639751442;      \/\/ pi\/2$/;"	v	typeref:typename:double
+NUINT32_RANGE	./bmath.cpp	/^    constexpr int64_t NUINT32_RANGE = static_cast<int64_t>(UINT32_MAX)*-1; \/\/ "negative" 32 ui/;"	l	function:bmath::square	typeref:typename:int64_t	file:
+PI	./bmath.h	/^constexpr double PI      = 3.141592653589793238462643383279502884;           \/\/ pi$/;"	v	typeref:typename:double
+TWO_PI	./bmath.h	/^constexpr double TWO_PI  = 3.141592653589793238462643383279502884 * 2;   \/\/ pi*2$/;"	v	typeref:typename:double
+__anon76c017b14510	./tags	/^bmath::sqrt	.\/bmath.cpp	\/^double bmath::sqrt(int radicand)$\/;"	f	class:bmath	typeref:typename/;"	c	file:	inherits:bmathtyperef:typename:doublesignature:(int radicand) min_guess./bmath.cpp/^std::pair<int,int>min_guess
+__anon76c017b14710	./tags	/^bmath::cbrt	.\/bmath.cpp	\/^double bmath::cbrt(double radicand)$\/;"	f	class:bmath	typeref:typen/;"	c	file:	inherits:bmathtyperef:typename:doublesignature:(double radicand) radix./bmath.cpp/^doublebmath::radix(int index, int radicand) 
+__anon76c017b15510	./tags	/^bmath::is_composite	.\/bmath.cpp	\/^bool bmath::is_composite(int n) { return !is_prime(n); }$\/;/;"	c	file:	inherits:bmathtyperef:typename:boolsignature:(int n) is_coprime./bmath.cpp/^boolbmath::is_coprime(int n1, int n2) 
+__anon76c017b17210	./tags	/^reciprocalf	.\/fraction.cpp	\/^double bmath::reciprocalf(double frac) { return 1 \\\/ frac; }$\//;"	c	file:	inherits:bmathtyperef:typename:doublesignature:(double frac) bmath::reciprocalf./fraction.cpp/^doublebmath::reciprocalf(double frac) 
+a	./bmath.cpp	/^    double a = static_cast<double>(closest_guess.first);$/;"	l	function:bmath::sqrt	typeref:typename:double	file:
+absolute	./bmath.cpp	/^uint64_t bmath::absolute(int64_t n)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t n)
+absolute	./bmath.h	/^    uint64_t absolute(int64_t n);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t n)
+absolute	./main.cpp	/^    int absolute = (mask + number)^mask;$/;"	l	function:absolute_test	typeref:typename:int	file:
+absolute_test	./main.cpp	/^void absolute_test()$/;"	f	typeref:typename:void	signature:()
+add	./fraction.cpp	/^bmath::Fraction bmath::Fraction::add(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+add	./fraction.h	/^        Fraction add(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+average	./bmath.h	/^    double average(Ts ... args);$/;"	p	namespace:bmath	typeref:typename:double	signature:(Ts...args)
+average	./bmath.h	/^double bmath::average(Ts ... args)$/;"	f	class:bmath	typeref:typename:double	signature:(Ts...args)
+average_impl	./bmath.h	/^double average_impl(int& count, double& sum, const Head& head, const Tail& ...tail)$/;"	f	typeref:typename:double	signature:(int & count,double & sum,const Head & head,const Tail &...tail)
+average_impl	./bmath.h	/^inline double average_impl(int& count, double& sum) { return sum \/ count; }$/;"	f	typeref:typename:double	signature:(int & count,double & sum)
+average_test	./main.cpp	/^void average_test()$/;"	f	typeref:typename:void	signature:()
+babsolute	./main.cpp	/^    bitset<32> babsolute = absolute;$/;"	l	function:absolute_test	typeref:typename:bitset<32>	file:
+begin_time	./main.cpp	/^    clock_t begin_time = clock();$/;"	l	function:power_benchmark	typeref:typename:clock_t	file:
+bmask	./main.cpp	/^    bitset<32> bmask = mask;$/;"	l	function:absolute_test	typeref:typename:bitset<32>	file:
+bmath	./bmath.h	/^namespace bmath$/;"	n
+bmath	./fraction.h	/^namespace bmath$/;"	n
+bmath::Fraction	./fraction.h	/^    class Fraction {$/;"	c	namespace:bmath
+bmath::Fraction::Fraction	./fraction.cpp	/^bmath::Fraction::Fraction(int numerator, int denominator, int mixed_num)$/;"	f	class:bmath::Fraction	signature:(int numerator,int denominator,int mixed_num)
+bmath::Fraction::Fraction	./fraction.h	/^        Fraction(int numerator, int denominator, int mixed_num = 0);$/;"	p	class:bmath::Fraction	access:public	signature:(int numerator,int denominator,int mixed_num=0)
+bmath::Fraction::add	./fraction.cpp	/^bmath::Fraction bmath::Fraction::add(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::add	./fraction.h	/^        Fraction add(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::cross_mult	./fraction.cpp	/^bmath::Fraction bmath::Fraction::cross_mult(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::cross_mult	./fraction.h	/^        Fraction cross_mult(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::decimal	./fraction.cpp	/^double bmath::Fraction::decimal()$/;"	f	class:bmath::Fraction	typeref:typename:double	signature:()
+bmath::Fraction::decimal	./fraction.h	/^        double decimal();$/;"	p	class:bmath::Fraction	typeref:typename:double	access:public	signature:()
+bmath::Fraction::div	./fraction.cpp	/^bmath::Fraction bmath::Fraction::div(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::div	./fraction.h	/^        Fraction div(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::is_eq	./fraction.cpp	/^bool bmath::Fraction::is_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::is_eq	./fraction.h	/^        bool is_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::is_gtr	./fraction.cpp	/^bool bmath::Fraction::is_gtr(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::is_gtr	./fraction.h	/^        bool is_gtr(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::is_gtr_or_eq	./fraction.cpp	/^bool bmath::Fraction::is_gtr_or_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::is_gtr_or_eq	./fraction.h	/^        bool is_gtr_or_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::is_improper	./fraction.cpp	/^bool bmath::Fraction::is_improper()$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:()
+bmath::Fraction::is_improper	./fraction.h	/^        bool is_improper();$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:()
+bmath::Fraction::is_less	./fraction.cpp	/^bool bmath::Fraction::is_less(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::is_less	./fraction.h	/^        bool is_less(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::is_less_or_eq	./fraction.cpp	/^bool bmath::Fraction::is_less_or_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::is_less_or_eq	./fraction.h	/^        bool is_less_or_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::m_decimal	./fraction.h	/^        double m_decimal;$/;"	m	class:bmath::Fraction	typeref:typename:double	access:public
+bmath::Fraction::m_denominator	./fraction.h	/^        int m_denominator;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+bmath::Fraction::m_mixed_num	./fraction.h	/^        int m_mixed_num;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+bmath::Fraction::m_numerator	./fraction.h	/^        int m_numerator;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+bmath::Fraction::make_equiv	./fraction.cpp	/^std::pair<Fraction, Fraction> bmath::Fraction::make_equiv(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:std::pair<Fraction,Fraction>	signature:(Fraction other) const
+bmath::Fraction::make_equiv	./fraction.h	/^        std::pair<Fraction, Fraction> make_equiv(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:std::pair<Fraction,Fraction>	access:private	signature:(Fraction other) const
+bmath::Fraction::mult	./fraction.cpp	/^bmath::Fraction bmath::Fraction::mult(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::mult	./fraction.h	/^        Fraction mult(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::operator *	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator*(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::operator *	./fraction.h	/^        Fraction operator*(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::operator +	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator+(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::operator +	./fraction.h	/^        Fraction operator+(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::operator -	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator-(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::operator -	./fraction.h	/^        Fraction operator-(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::operator /	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator\/(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::operator /	./fraction.h	/^        Fraction operator\/(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::operator <	./fraction.cpp	/^bool bmath::Fraction::operator<(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::operator <	./fraction.h	/^        bool operator<(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::operator <=	./fraction.cpp	/^bool bmath::Fraction::operator<=(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::operator <=	./fraction.h	/^        bool operator<=(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::operator ==	./fraction.cpp	/^bool bmath::Fraction::operator==(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::operator ==	./fraction.h	/^        bool operator==(Fraction other)const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::operator >	./fraction.cpp	/^bool bmath::Fraction::operator>(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::operator >	./fraction.h	/^        bool operator>(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::operator >=	./fraction.cpp	/^bool bmath::Fraction::operator>=(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+bmath::Fraction::operator >=	./fraction.h	/^        bool operator>=(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+bmath::Fraction::reciprocal	./fraction.cpp	/^bmath::Fraction bmath::Fraction::reciprocal()$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:()
+bmath::Fraction::reciprocal	./fraction.h	/^        Fraction reciprocal();$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:()
+bmath::Fraction::simplify	./fraction.cpp	/^void bmath::Fraction::simplify()$/;"	f	class:bmath::Fraction	typeref:typename:void	signature:()
+bmath::Fraction::simplify	./fraction.h	/^        void simplify();$/;"	p	class:bmath::Fraction	typeref:typename:void	access:public	signature:()
+bmath::Fraction::sub	./fraction.cpp	/^bmath::Fraction bmath::Fraction::sub(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+bmath::Fraction::sub	./fraction.h	/^        Fraction sub(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+bmath::Fraction::update	./fraction.cpp	/^void bmath::Fraction::update()$/;"	f	class:bmath::Fraction	typeref:typename:void	signature:()
+bmath::Fraction::update	./fraction.h	/^        void update();		\/\/ update m_decimal whenever the class get a change$/;"	p	class:bmath::Fraction	typeref:typename:void	access:private	signature:()
+bmath::absolute	./bmath.cpp	/^uint64_t bmath::absolute(int64_t n)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t n)
+bmath::absolute	./bmath.h	/^    uint64_t absolute(int64_t n);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t n)
+bmath::average	./bmath.h	/^    double average(Ts ... args);$/;"	p	namespace:bmath	typeref:typename:double	signature:(Ts...args)
+bmath::average	./bmath.h	/^double bmath::average(Ts ... args)$/;"	f	class:bmath	typeref:typename:double	signature:(Ts...args)
+bmath::cbrt	./bmath.cpp	/^double bmath::cbrt(double radicand)$/;"	f	class:bmath	typeref:typename:double	signature:(double radicand)
+bmath::cbrt	./bmath.h	/^    double cbrt(double radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double radicand)
+bmath::common_factors	./bmath.cpp	/^std::vector<int> bmath::common_factors(int n1, int n2)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int n1,int n2)
+bmath::common_factors	./bmath.h	/^    std::vector<int> common_factors(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int n1,int n2)
+bmath::common_multiples	./bmath.cpp	/^std::vector<int> bmath::common_multiples(int num1, int num2)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int num1,int num2)
+bmath::common_multiples	./bmath.h	/^    std::vector<int> common_multiples(int num1, int num2);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int num1,int num2)
+bmath::cube	./bmath.cpp	/^int64_t bmath::cube(int32_t base)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base)
+bmath::cube	./bmath.h	/^    int64_t cube(int32_t base);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base)
+bmath::cubed	./bmath.cpp	/^double bmath::cubed(double n)$/;"	f	class:bmath	typeref:typename:double	signature:(double n)
+bmath::cubed	./bmath.h	/^    double cubed(double n);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double n)
+bmath::distance	./bmath.cpp	/^uint64_t bmath::distance(int64_t n1, int64_t n2)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t n1,int64_t n2)
+bmath::distance	./bmath.h	/^    uint64_t distance(int64_t n1, int64_t n2);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t n1,int64_t n2)
+bmath::eucl_gcf	./bmath.cpp	/^int bmath::eucl_gcf(int n1, int n2)$/;"	f	class:bmath	typeref:typename:int	signature:(int n1,int n2)
+bmath::eucl_gcf	./bmath.h	/^    int eucl_gcf(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int n1,int n2)
+bmath::factorial	./bmath.cpp	/^uint64_t bmath::factorial(unsigned int n)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(unsigned int n)
+bmath::factorial	./bmath.h	/^    uint64_t factorial(unsigned int n);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(unsigned int n)
+bmath::find_factors	./bmath.cpp	/^std::vector<int> bmath::find_factors(int n)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int n)
+bmath::find_factors	./bmath.h	/^    std::vector<int> find_factors(int n);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int n)
+bmath::find_primes	./bmath.cpp	/^std::map<int, bool> bmath::find_primes(int n)$/;"	f	class:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+bmath::find_primes	./bmath.h	/^    std::map<int, bool> find_primes(int n);$/;"	p	namespace:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+bmath::gcf	./bmath.cpp	/^int bmath::gcf(int n1, int n2)$/;"	f	class:bmath	typeref:typename:int	signature:(int n1,int n2)
+bmath::gcf	./bmath.h	/^    int gcf(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int n1,int n2)
+bmath::is_composite	./bmath.cpp	/^bool bmath::is_composite(int n) { return !is_prime(n); }$/;"	f	class:bmath	typeref:typename:bool	signature:(int n)
+bmath::is_composite	./bmath.h	/^    bool is_composite(int n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n)
+bmath::is_coprime	./bmath.cpp	/^bool bmath::is_coprime(int n1, int n2) { return gcf(n1, n2); }$/;"	f	class:bmath	typeref:typename:bool	signature:(int n1,int n2)
+bmath::is_coprime	./bmath.h	/^    bool is_coprime(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n1,int n2)
+bmath::is_factor	./bmath.cpp	/^bool bmath::is_factor(int n, int of_n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n,int of_n)
+bmath::is_factor	./bmath.h	/^    bool is_factor(int n, int of_n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n,int of_n)
+bmath::is_multiple	./bmath.cpp	/^bool bmath::is_multiple(int n, int of_n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n,int of_n)
+bmath::is_multiple	./bmath.h	/^    bool is_multiple(int n, int of_n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n,int of_n)
+bmath::is_prime	./bmath.cpp	/^bool bmath::is_prime(int n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n)
+bmath::is_prime	./bmath.h	/^    bool is_prime(int n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n)
+bmath::iter_power	./bmath.cpp	/^int64_t bmath::iter_power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::iter_power	./bmath.h	/^    int64_t iter_power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::lcm	./bmath.cpp	/^int bmath::lcm(int num1, int num2)$/;"	f	class:bmath	typeref:typename:int	signature:(int num1,int num2)
+bmath::lcm	./bmath.h	/^    int lcm(int num1, int num2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int num1,int num2)
+bmath::log	./bmath.cpp	/^double bmath::log(double base, double value)$/;"	f	class:bmath	typeref:typename:double	signature:(double base,double value)
+bmath::log	./bmath.h	/^    double log(double base, double value);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double base,double value)
+bmath::naive_power	./bmath.cpp	/^int64_t bmath::naive_power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::naive_power	./bmath.h	/^    int64_t naive_power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::power	./bmath.cpp	/^int64_t bmath::power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::power	./bmath.h	/^    int64_t power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+bmath::powerd	./bmath.cpp	/^double bmath::powerd(double base, double exponent)$/;"	f	class:bmath	typeref:typename:double	signature:(double base,double exponent)
+bmath::powerd	./bmath.h	/^    double powerd(double base, double number);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double base,double number)
+bmath::radix	./bmath.cpp	/^double bmath::radix(int index, int radicand) { return 0.0; }$/;"	f	class:bmath	typeref:typename:double	signature:(int index,int radicand)
+bmath::radix	./bmath.h	/^    double radix(int index, int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int index,int radicand)
+bmath::reciprocalf	./fraction.cpp	/^double bmath::reciprocalf(double frac) { return 1 \/ frac; }$/;"	f	class:bmath	typeref:typename:double	signature:(double frac)
+bmath::reciprocalf	./fraction.h	/^    double reciprocalf(double frac);	\/\/ reciprocal float$/;"	p	namespace:bmath	typeref:typename:double	signature:(double frac)
+bmath::rsqrt	./bmath.cpp	/^double bmath::rsqrt(int radicand) { return 0.0; }$/;"	f	class:bmath	typeref:typename:double	signature:(int radicand)
+bmath::rsqrt	./bmath.h	/^    double rsqrt(int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int radicand)
+bmath::sieve_of_eratosthenes_table	./bmath.cpp	/^std::map<int, bool> bmath::sieve_of_eratosthenes_table(int n)$/;"	f	class:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+bmath::sieve_of_eratosthenes_table	./bmath.h	/^    std::map<int, bool> sieve_of_eratosthenes_table(int n);$/;"	p	namespace:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+bmath::sqrt	./bmath.cpp	/^double bmath::sqrt(int radicand)$/;"	f	class:bmath	typeref:typename:double	signature:(int radicand)
+bmath::sqrt	./bmath.h	/^    double sqrt(int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int radicand)
+bmath::square	./bmath.cpp	/^uint64_t bmath::square(int64_t base)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t base)
+bmath::square	./bmath.h	/^    uint64_t square(int64_t base);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t base)
+bmath::squared	./bmath.cpp	/^double bmath::squared(double n)$/;"	f	class:bmath	typeref:typename:double	signature:(double n)
+bmath::squared	./bmath.h	/^    double squared(double n);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double n)
+bnumber	./main.cpp	/^    bitset<32> bnumber = number;$/;"	l	function:absolute_test	typeref:typename:bitset<32>	file:
+cbrt	./bmath.cpp	/^double bmath::cbrt(double radicand)$/;"	f	class:bmath	typeref:typename:double	signature:(double radicand)
+cbrt	./bmath.h	/^    double cbrt(double radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double radicand)
+closest_guess	./bmath.cpp	/^    std::pair<int, int> closest_guess{0, 0};$/;"	l	function:bmath::sqrt	typeref:typename:std::pair<int,int>	file:
+common_factor	./bmath.cpp	/^    std::vector<int> common_factor = common_factors(n1, n2);$/;"	l	function:bmath::gcf	typeref:typename:std::vector<int>	file:
+common_factors	./bmath.cpp	/^    std::vector<int> common_factors;$/;"	l	function:bmath::common_factors	typeref:typename:std::vector<int>	file:
+common_factors	./bmath.cpp	/^std::vector<int> bmath::common_factors(int n1, int n2)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int n1,int n2)
+common_factors	./bmath.h	/^    std::vector<int> common_factors(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int n1,int n2)
+common_multiples	./bmath.cpp	/^std::vector<int> bmath::common_multiples(int num1, int num2)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int num1,int num2)
+common_multiples	./bmath.h	/^    std::vector<int> common_multiples(int num1, int num2);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int num1,int num2)
+count	./bmath.h	/^    int count = 0;$/;"	l	function:bmath::average	typeref:typename:int	file:
+cross_mult	./fraction.cpp	/^bmath::Fraction bmath::Fraction::cross_mult(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+cross_mult	./fraction.h	/^        Fraction cross_mult(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+cube	./bmath.cpp	/^int64_t bmath::cube(int32_t base)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base)
+cube	./bmath.h	/^    int64_t cube(int32_t base);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base)
+cubed	./bmath.cpp	/^double bmath::cubed(double n)$/;"	f	class:bmath	typeref:typename:double	signature:(double n)
+cubed	./bmath.h	/^    double cubed(double n);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double n)
+d	./main.cpp	/^    double d = 20.00;$/;"	l	function:average_test	typeref:typename:double	file:
+decimal	./fraction.cpp	/^double bmath::Fraction::decimal()$/;"	f	class:bmath::Fraction	typeref:typename:double	signature:()
+decimal	./fraction.h	/^        double decimal();$/;"	p	class:bmath::Fraction	typeref:typename:double	access:public	signature:()
+denom1	./fraction.cpp	/^    int denom1 = m_denominator;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+denom1_quotient	./fraction.cpp	/^    int denom1_quotient = denoms_lcm \/ denom1;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+denom2	./fraction.cpp	/^    int denom2 = other.m_denominator;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+denom2_quotient	./fraction.cpp	/^    int denom2_quotient = denoms_lcm \/ denom2;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+denoms_lcm	./fraction.cpp	/^    int denoms_lcm = lcm(denom1, denom2);$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+dig_len	./main.cpp	/^int dig_len(uint64_t n)$/;"	f	typeref:typename:int	signature:(uint64_t n)
+distance	./bmath.cpp	/^uint64_t bmath::distance(int64_t n1, int64_t n2)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t n1,int64_t n2)
+distance	./bmath.h	/^    uint64_t distance(int64_t n1, int64_t n2);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t n1,int64_t n2)
+div	./fraction.cpp	/^bmath::Fraction bmath::Fraction::div(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+div	./fraction.h	/^        Fraction div(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+dsk	./printv.h	/^namespace dsk {$/;"	n
+dsk::printv	./printv.h	/^    void printv(const std::vector<T>& vector, const bool endline = true);$/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<T> & vector,const bool endline=true)
+dsk::printv	./printv.h	/^    void printv(const std::vector<std::vector<T>>& vector, const bool endline = true, const bool/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<std::vector<T>> & vector,const bool endline=true,const bool extra_indent=false)
+dsk::printv	./printv.h	/^    void printv(const std::vector<std::vector<std::vector<T>>>& vector);$/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<std::vector<std::vector<T>>> & vector)
+dsk::printv	./printv.h	/^void dsk::printv(const std::vector<T>& vector, const bool endline)$/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<T> & vector,const bool endline)
+dsk::printv	./printv.h	/^void dsk::printv(const std::vector<std::vector<T>>& vector, const bool endline, const bool extra/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<std::vector<T>> & vector,const bool endline,const bool extra_indent)
+dsk::printv	./printv.h	/^void dsk::printv(const std::vector<std::vector<std::vector<T>>>& vector)$/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<std::vector<std::vector<T>>> & vector)
+eucl_gcf	./bmath.cpp	/^int bmath::eucl_gcf(int n1, int n2)$/;"	f	class:bmath	typeref:typename:int	signature:(int n1,int n2)
+eucl_gcf	./bmath.h	/^    int eucl_gcf(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int n1,int n2)
+factorial	./bmath.cpp	/^uint64_t bmath::factorial(unsigned int n)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(unsigned int n)
+factorial	./bmath.h	/^    uint64_t factorial(unsigned int n);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(unsigned int n)
+factors	./bmath.cpp	/^    std::vector<int> factors;$/;"	l	function:bmath::find_factors	typeref:typename:std::vector<int>	file:
+find_factors	./bmath.cpp	/^std::vector<int> bmath::find_factors(int n)$/;"	f	class:bmath	typeref:typename:std::vector<int>	signature:(int n)
+find_factors	./bmath.h	/^    std::vector<int> find_factors(int n);$/;"	p	namespace:bmath	typeref:typename:std::vector<int>	signature:(int n)
+find_primes	./bmath.cpp	/^std::map<int, bool> bmath::find_primes(int n)$/;"	f	class:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+find_primes	./bmath.h	/^    std::map<int, bool> find_primes(int n);$/;"	p	namespace:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+frac_pair	./fraction.cpp	/^        std::pair<Fraction, Fraction> frac_pair = make_equiv(other);$/;"	l	function:bmath::Fraction::add	typeref:typename:std::pair<Fraction,Fraction>	file:
+frac_pair	./fraction.cpp	/^        std::pair<Fraction, Fraction> frac_pair = make_equiv(other);$/;"	l	function:bmath::Fraction::sub	typeref:typename:std::pair<Fraction,Fraction>	file:
+gcf	./bmath.cpp	/^int bmath::gcf(int n1, int n2)$/;"	f	class:bmath	typeref:typename:int	signature:(int n1,int n2)
+gcf	./bmath.h	/^    int gcf(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int n1,int n2)
+gcf_	./fraction.cpp	/^    int gcf_ = gcf(m_numerator, m_denominator);$/;"	l	function:bmath::Fraction::simplify	typeref:typename:int	file:
+half	./bmath.cpp	/^    constexpr double half = 0.5;$/;"	l	function:bmath::sqrt	typeref:typename:double	file:
+i	./bmath.cpp	/^        for (double i = exponent; i > 1; i+=i) temp *= base;$/;"	l	function:bmath::powerd	typeref:typename:double	file:
+i	./bmath.cpp	/^        for (unsigned int i = 1; i < exponent; ++i) temp *= base;$/;"	l	function:bmath::powerd	typeref:typename:unsigned int	file:
+i	./bmath.cpp	/^    for (int i = 0; i < iter; ++i) {$/;"	l	function:bmath::sqrt	typeref:typename:int	file:
+i	./bmath.cpp	/^    for (int i = 1; i <= n; ++i)$/;"	l	function:bmath::find_factors	typeref:typename:int	file:
+i	./bmath.cpp	/^    for (int i = 2; i <= n; ++i) table[i] = true;$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:int	file:
+i	./bmath.cpp	/^    for (int i = 2; i <= sqrt_n; ++i) {$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:int	file:
+i	./bmath.cpp	/^    for (uint32_t i = 1; i < exponent; ++i) result *= base;$/;"	l	function:bmath::naive_power	typeref:typename:uint32_t	file:
+i	./bmath.cpp	/^    int i = 1;$/;"	l	function:bmath::sqrt	typeref:typename:int	file:
+i	./main.cpp	/^    char i = 'a';$/;"	l	function:average_test	typeref:typename:char	file:
+i	./main.cpp	/^    for (uint32_t i = 0; i < 100000; ++i) {$/;"	l	function:power_benchmark	typeref:typename:uint32_t	file:
+i	./main.cpp	/^    unsigned int i = 4294967295; \/\/ 4'200'000'000 < max < 4'300'000'000$/;"	l	function:sq_max_test	typeref:typename:unsigned int	file:
+i	./printv.h	/^    for (int i = 0; i < v_size; ++i) {$/;"	l	function:dsk::printv	typeref:typename:int	file:
+i	./tags	/^i	.\/bmath.cpp	\/^        for (double i = exponent; i > 1; i+=i) temp *= base;$\/;"	l	function:b/;"	v	typeref:typename:double
+i_square	./bmath.cpp	/^                int i_square = static_cast<int>(pow(i, 2));		\/\/ double cannot exceed int$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:int	file:
+is_composite	./bmath.cpp	/^bool bmath::is_composite(int n) { return !is_prime(n); }$/;"	f	class:bmath	typeref:typename:bool	signature:(int n)
+is_composite	./bmath.h	/^    bool is_composite(int n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n)
+is_coprime	./bmath.cpp	/^bool bmath::is_coprime(int n1, int n2) { return gcf(n1, n2); }$/;"	f	class:bmath	typeref:typename:bool	signature:(int n1,int n2)
+is_coprime	./bmath.h	/^    bool is_coprime(int n1, int n2);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n1,int n2)
+is_eq	./fraction.cpp	/^bool bmath::Fraction::is_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+is_eq	./fraction.h	/^        bool is_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+is_factor	./bmath.cpp	/^bool bmath::is_factor(int n, int of_n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n,int of_n)
+is_factor	./bmath.h	/^    bool is_factor(int n, int of_n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n,int of_n)
+is_gtr	./fraction.cpp	/^bool bmath::Fraction::is_gtr(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+is_gtr	./fraction.h	/^        bool is_gtr(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+is_gtr_or_eq	./fraction.cpp	/^bool bmath::Fraction::is_gtr_or_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+is_gtr_or_eq	./fraction.h	/^        bool is_gtr_or_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+is_improper	./fraction.cpp	/^bool bmath::Fraction::is_improper()$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:()
+is_improper	./fraction.h	/^        bool is_improper();$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:()
+is_less	./fraction.cpp	/^bool bmath::Fraction::is_less(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+is_less	./fraction.h	/^        bool is_less(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+is_less_or_eq	./fraction.cpp	/^bool bmath::Fraction::is_less_or_eq(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+is_less_or_eq	./fraction.h	/^        bool is_less_or_eq(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+is_multiple	./bmath.cpp	/^bool bmath::is_multiple(int n, int of_n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n,int of_n)
+is_multiple	./bmath.h	/^    bool is_multiple(int n, int of_n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n,int of_n)
+is_prime	./bmath.cpp	/^bool bmath::is_prime(int n)$/;"	f	class:bmath	typeref:typename:bool	signature:(int n)
+is_prime	./bmath.h	/^    bool is_prime(int n);$/;"	p	namespace:bmath	typeref:typename:bool	signature:(int n)
+iter	./bmath.cpp	/^    constexpr int iter = 4;$/;"	l	function:bmath::sqrt	typeref:typename:int	file:
+iter_power	./bmath.cpp	/^int64_t bmath::iter_power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+iter_power	./bmath.h	/^    int64_t iter_power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+j	./bmath.cpp	/^            for (int j = 0; i < n; ++j) {$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:int	file:
+j	./tags	/^j	.\/bmath.cpp	\/^            for (int j = 0; i < n; ++j) {$\/;"	l	function:bmath::sieve_of_erat/;"	v	typeref:typename:int
+lcm	./bmath.cpp	/^int bmath::lcm(int num1, int num2)$/;"	f	class:bmath	typeref:typename:int	signature:(int num1,int num2)
+lcm	./bmath.h	/^    int lcm(int num1, int num2);$/;"	p	namespace:bmath	typeref:typename:int	signature:(int num1,int num2)
+lln1	./bmath.cpp	/^        uint64_t lln1 = 0;$/;"	l	function:bmath::distance	typeref:typename:uint64_t	file:
+lln2	./bmath.cpp	/^        uint64_t lln2 = 0;$/;"	l	function:bmath::distance	typeref:typename:uint64_t	file:
+log	./bmath.cpp	/^double bmath::log(double base, double value)$/;"	f	class:bmath	typeref:typename:double	signature:(double base,double value)
+log	./bmath.h	/^    double log(double base, double value);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double base,double value)
+m_decimal	./fraction.h	/^        double m_decimal;$/;"	m	class:bmath::Fraction	typeref:typename:double	access:public
+m_denominator	./fraction.h	/^        int m_denominator;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+m_mixed_num	./fraction.h	/^        int m_mixed_num;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+m_numerator	./fraction.h	/^        int m_numerator;$/;"	m	class:bmath::Fraction	typeref:typename:int	access:public
+main	./main.cpp	/^int main(void)$/;"	f	typeref:typename:int	signature:(void)
+make_equiv	./fraction.cpp	/^std::pair<Fraction, Fraction> bmath::Fraction::make_equiv(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:std::pair<Fraction,Fraction>	signature:(Fraction other) const
+make_equiv	./fraction.h	/^        std::pair<Fraction, Fraction> make_equiv(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:std::pair<Fraction,Fraction>	access:private	signature:(Fraction other) const
+mask	./bmath.cpp	/^    int64_t mask = n >> (sizeof(int64_t)*CHAR_BIT - 1);$/;"	l	function:bmath::absolute	typeref:typename:int64_t	file:
+mask	./main.cpp	/^    int mask = number >> 31;$/;"	l	function:absolute_test	typeref:typename:int	file:
+max_guess	./bmath.cpp	/^    std::pair<int, int> max_guess{0, 0};$/;"	l	function:bmath::sqrt	typeref:typename:std::pair<int,int>	file:
+min_guess	./bmath.cpp	/^    std::pair<int, int> min_guess{0, 0};$/;"	l	function:bmath::sqrt	typeref:typename:std::pair<int,int>	file:
+mult	./fraction.cpp	/^bmath::Fraction bmath::Fraction::mult(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+mult	./fraction.h	/^        Fraction mult(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+mult1	./bmath.cpp	/^    int mult1 = num1;$/;"	l	function:bmath::lcm	typeref:typename:int	file:
+mult2	./bmath.cpp	/^    int mult2 = num2;$/;"	l	function:bmath::lcm	typeref:typename:int	file:
+n1_fac	./bmath.cpp	/^    std::vector<int> n1_fac = find_factors(n1);$/;"	l	function:bmath::common_factors	typeref:typename:std::vector<int>	file:
+n2_fac	./bmath.cpp	/^    std::vector<int> n2_fac = find_factors(n2);$/;"	l	function:bmath::common_factors	typeref:typename:std::vector<int>	file:
+naive_power	./bmath.cpp	/^int64_t bmath::naive_power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+naive_power	./bmath.h	/^    int64_t naive_power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+naive_power_time	./main.cpp	/^    double naive_power_time = static_cast<double>(clock() - begin_time) \/ CLOCKS_PER_SEC;$/;"	l	function:power_benchmark	typeref:typename:double	file:
+nonp_index	./bmath.cpp	/^                int nonp_index = i_square + j * i;		\/\/ non-prime index$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:int	file:
+number	./main.cpp	/^    int number = -100;$/;"	l	function:absolute_test	typeref:typename:int	file:
+number	./main.cpp	/^    int number = 10;$/;"	l	function:sq_max_test	typeref:typename:int	file:
+numer1	./fraction.cpp	/^    int numer1 = m_numerator;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+numer2	./fraction.cpp	/^    int numer2 = other.m_numerator;$/;"	l	function:bmath::Fraction::make_equiv	typeref:typename:int	file:
+operator *	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator*(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+operator *	./fraction.h	/^        Fraction operator*(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+operator +	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator+(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+operator +	./fraction.h	/^        Fraction operator+(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+operator -	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator-(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+operator -	./fraction.h	/^        Fraction operator-(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+operator /	./fraction.cpp	/^bmath::Fraction bmath::Fraction::operator\/(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+operator /	./fraction.h	/^        Fraction operator\/(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+operator <	./fraction.cpp	/^bool bmath::Fraction::operator<(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+operator <	./fraction.h	/^        bool operator<(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+operator <<	./fraction.cpp	/^std::ostream& operator<<(std::ostream& os, Fraction frac)$/;"	f	typeref:typename:std::ostream &	signature:(std::ostream & os,Fraction frac)
+operator <=	./fraction.cpp	/^bool bmath::Fraction::operator<=(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+operator <=	./fraction.h	/^        bool operator<=(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+operator ==	./fraction.cpp	/^bool bmath::Fraction::operator==(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+operator ==	./fraction.h	/^        bool operator==(Fraction other)const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+operator >	./fraction.cpp	/^bool bmath::Fraction::operator>(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+operator >	./fraction.h	/^        bool operator>(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+operator >=	./fraction.cpp	/^bool bmath::Fraction::operator>=(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bool	signature:(Fraction other) const
+operator >=	./fraction.h	/^        bool operator>=(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:bool	access:public	signature:(Fraction other) const
+other_equiv	./fraction.cpp	/^    Fraction other_equiv(1, 1);$/;"	l	function:bmath::Fraction::add	typeref:typename:Fraction	file:
+other_equiv	./fraction.cpp	/^    Fraction other_equiv(1, 1);$/;"	l	function:bmath::Fraction::sub	typeref:typename:Fraction	file:
+power	./bmath.cpp	/^int64_t bmath::power(int32_t base, uint32_t exponent)$/;"	f	class:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+power	./bmath.h	/^    int64_t power(int32_t base, uint32_t exponent);$/;"	p	namespace:bmath	typeref:typename:int64_t	signature:(int32_t base,uint32_t exponent)
+power_benchmark	./main.cpp	/^void power_benchmark()$/;"	f	typeref:typename:void	signature:()
+powerd	./bmath.cpp	/^double bmath::powerd(double base, double exponent)$/;"	f	class:bmath	typeref:typename:double	signature:(double base,double exponent)
+powerd	./bmath.h	/^    double powerd(double base, double number);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double base,double number)
+printv	./printv.h	/^    void printv(const std::vector<T>& vector, const bool endline = true);$/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<T> & vector,const bool endline=true)
+printv	./printv.h	/^    void printv(const std::vector<std::vector<T>>& vector, const bool endline = true, const bool/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<std::vector<T>> & vector,const bool endline=true,const bool extra_indent=false)
+printv	./printv.h	/^    void printv(const std::vector<std::vector<std::vector<T>>>& vector);$/;"	p	namespace:dsk	typeref:typename:void	signature:(const std::vector<std::vector<std::vector<T>>> & vector)
+printv	./printv.h	/^void dsk::printv(const std::vector<T>& vector, const bool endline)$/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<T> & vector,const bool endline)
+printv	./printv.h	/^void dsk::printv(const std::vector<std::vector<T>>& vector, const bool endline, const bool extra/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<std::vector<T>> & vector,const bool endline,const bool extra_indent)
+printv	./printv.h	/^void dsk::printv(const std::vector<std::vector<std::vector<T>>>& vector)$/;"	f	class:dsk	typeref:typename:void	signature:(const std::vector<std::vector<std::vector<T>>> & vector)
+radix	./bmath.cpp	/^double bmath::radix(int index, int radicand) { return 0.0; }$/;"	f	class:bmath	typeref:typename:double	signature:(int index,int radicand)
+radix	./bmath.h	/^    double radix(int index, int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int index,int radicand)
+reciprocal	./fraction.cpp	/^bmath::Fraction bmath::Fraction::reciprocal()$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:()
+reciprocal	./fraction.h	/^        Fraction reciprocal();$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:()
+reciprocalf	./fraction.cpp	/^double bmath::reciprocalf(double frac) { return 1 \/ frac; }$/;"	f	class:bmath	typeref:typename:double	signature:(double frac)
+reciprocalf	./fraction.h	/^    double reciprocalf(double frac);	\/\/ reciprocal float$/;"	p	namespace:bmath	typeref:typename:double	signature:(double frac)
+result	./bmath.cpp	/^    double result = 0;$/;"	l	function:bmath::sqrt	typeref:typename:double	file:
+result	./bmath.cpp	/^    int64_t result = (mask + n)^mask;$/;"	l	function:bmath::absolute	typeref:typename:int64_t	file:
+result	./bmath.cpp	/^    int64_t result = 1;$/;"	l	function:bmath::iter_power	typeref:typename:int64_t	file:
+result	./bmath.cpp	/^    int64_t result = base;$/;"	l	function:bmath::naive_power	typeref:typename:int64_t	file:
+result	./bmath.cpp	/^    int64_t result = static_cast<int64_t>(base);$/;"	l	function:bmath::cube	typeref:typename:int64_t	file:
+result	./bmath.cpp	/^    int64_t result = temp * temp;$/;"	l	function:bmath::power	typeref:typename:int64_t	file:
+result	./bmath.cpp	/^    uint64_t result = 0;$/;"	l	function:bmath::distance	typeref:typename:uint64_t	file:
+result	./bmath.cpp	/^    uint64_t result = static_cast<uint64_t>(base);$/;"	l	function:bmath::square	typeref:typename:uint64_t	file:
+result	./fraction.cpp	/^    Fraction result = cross_mult(other);$/;"	l	function:bmath::Fraction::is_eq	typeref:typename:Fraction	file:
+result	./fraction.cpp	/^    Fraction result = cross_mult(other);$/;"	l	function:bmath::Fraction::is_gtr	typeref:typename:Fraction	file:
+result	./fraction.cpp	/^    Fraction result = cross_mult(other);$/;"	l	function:bmath::Fraction::is_less	typeref:typename:Fraction	file:
+rsqrt	./bmath.cpp	/^double bmath::rsqrt(int radicand) { return 0.0; }$/;"	f	class:bmath	typeref:typename:double	signature:(int radicand)
+rsqrt	./bmath.h	/^    double rsqrt(int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int radicand)
+s	./main.cpp	/^    std::string s = std::to_string(n);$/;"	l	function:dig_len	typeref:typename:std::string	file:
+sieve_of_eratosthenes_table	./bmath.cpp	/^std::map<int, bool> bmath::sieve_of_eratosthenes_table(int n)$/;"	f	class:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+sieve_of_eratosthenes_table	./bmath.h	/^    std::map<int, bool> sieve_of_eratosthenes_table(int n);$/;"	p	namespace:bmath	typeref:typename:std::map<int,bool>	signature:(int n)
+sign	./bmath.cpp	/^int sign(int64_t n)$/;"	f	typeref:typename:int	signature:(int64_t n)
+simplify	./fraction.cpp	/^void bmath::Fraction::simplify()$/;"	f	class:bmath::Fraction	typeref:typename:void	signature:()
+simplify	./fraction.h	/^        void simplify();$/;"	p	class:bmath::Fraction	typeref:typename:void	access:public	signature:()
+sq	./bmath.cpp	/^    int sq;$/;"	l	function:bmath::sqrt	typeref:typename:int	file:
+sq	./main.cpp	/^    uint64_t sq = 0;$/;"	l	function:sq_max_test	typeref:typename:uint64_t	file:
+sq_max_test	./main.cpp	/^void sq_max_test()$/;"	f	typeref:typename:void	signature:()
+sq_max_test	./main.cpp	/^void sq_max_test();$/;"	p	typeref:typename:void	file:	signature:()
+sqrt	./bmath.cpp	/^double bmath::sqrt(int radicand)$/;"	f	class:bmath	typeref:typename:double	signature:(int radicand)
+sqrt	./bmath.h	/^    double sqrt(int radicand);$/;"	p	namespace:bmath	typeref:typename:double	signature:(int radicand)
+sqrt_n	./bmath.cpp	/^    double sqrt_n = sqrtf(static_cast<float>(n));		\/\/ not exceeding sqrt(n)$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:double	file:
+square	./bmath.cpp	/^uint64_t bmath::square(int64_t base)$/;"	f	class:bmath	typeref:typename:uint64_t	signature:(int64_t base)
+square	./bmath.h	/^    uint64_t square(int64_t base);$/;"	p	namespace:bmath	typeref:typename:uint64_t	signature:(int64_t base)
+squared	./bmath.cpp	/^double bmath::squared(double n)$/;"	f	class:bmath	typeref:typename:double	signature:(double n)
+squared	./bmath.h	/^    double squared(double n);$/;"	p	namespace:bmath	typeref:typename:double	signature:(double n)
+sub	./fraction.cpp	/^bmath::Fraction bmath::Fraction::sub(Fraction other) const$/;"	f	class:bmath::Fraction	typeref:typename:bmath::Fraction	signature:(Fraction other) const
+sub	./fraction.h	/^        Fraction sub(Fraction other) const;$/;"	p	class:bmath::Fraction	typeref:typename:Fraction	access:public	signature:(Fraction other) const
+sum	./bmath.h	/^    double sum = 0;$/;"	l	function:bmath::average	typeref:typename:double	file:
+table	./bmath.cpp	/^        std::map<int, bool> table = sieve_of_eratosthenes_table(n);$/;"	l	function:bmath::is_prime	typeref:typename:std::map<int,bool>	file:
+table	./bmath.cpp	/^    std::map<int, bool> table;$/;"	l	function:bmath::sieve_of_eratosthenes_table	typeref:typename:std::map<int,bool>	file:
+temp	./bmath.cpp	/^    double temp = base;$/;"	l	function:bmath::powerd	typeref:typename:double	file:
+temp	./bmath.cpp	/^    int64_t temp = power(base, exponent \/ 2);$/;"	l	function:bmath::power	typeref:typename:int64_t	file:
+this_equiv	./fraction.cpp	/^    Fraction this_equiv(1, 1);$/;"	l	function:bmath::Fraction::add	typeref:typename:Fraction	file:
+this_equiv	./fraction.cpp	/^    Fraction this_equiv(1, 1);$/;"	l	function:bmath::Fraction::sub	typeref:typename:Fraction	file:
+tobyte	./main.cpp	/^std::bitset<8> tobyte(int v)$/;"	f	typeref:typename:std::bitset<8>	signature:(int v)
+update	./fraction.cpp	/^void bmath::Fraction::update()$/;"	f	class:bmath::Fraction	typeref:typename:void	signature:()
+update	./fraction.h	/^        void update();		\/\/ update m_decimal whenever the class get a change$/;"	p	class:bmath::Fraction	typeref:typename:void	access:private	signature:()
+v_size	./printv.h	/^    const int v_size = vector.size();        \/\/ size of the vector$/;"	l	function:dsk::printv	typeref:typename:const int	file:
+v_size	./printv.h	/^    size_t v_size = vector.size();    \/\/ size of the vector$/;"	l	function:dsk::printv	typeref:typename:size_t	file:
+value	./main.cpp	/^    int value = 1;$/;"	l	function:main	typeref:typename:int	file:
+x	./bmath.cpp	/^    for (int x : n1_fac)$/;"	l	function:bmath::common_factors	typeref:typename:int	file:
+y	./bmath.cpp	/^        for (int y : n2_fac)$/;"	l	function:bmath::common_factors	typeref:typename:int	file:
+y	./tags	/^y	.\/bmath.cpp	\/^        for (int y : n2_fac)$\/;"	l	function:bmath::common_factors	typeref:typ/;"	v	typeref:typename:int
