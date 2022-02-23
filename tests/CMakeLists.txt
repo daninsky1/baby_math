@@ -16,4 +16,4 @@ target_link_libraries(bmath_fraction_tests
 include(GoogleTest)
 
 gtest_add_tests(TARGET bmath_tests)
-gtest_add_tests(TARGET bmath_frction_tests)
+gtest_add_tests(TARGET bmath_fraction_tests)
