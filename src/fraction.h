@@ -10,11 +10,11 @@ namespace bmath
     private:
         std::pair<Fraction, Fraction> make_equiv(Fraction other) const;
         void update();		// update m_decimal whenever the class get a change
-    public:
         int m_numerator;
         int m_denominator;
         int m_mixed_num;
         double m_decimal;
+    public:
         Fraction(int numerator, int denominator, int mixed_num = 0);
         // arithmetic
         Fraction add(Fraction other) const;
@@ -43,6 +43,10 @@ namespace bmath
         double decimal();
         // print
         std::string strfy();
+        int numerator() { return m_numerator; };
+        void  numerator(int n) { m_numerator = n; update(); };
+        int denominator() { return m_denominator; };
+        void denominator(int d) { m_denominator = d; update(); };
     };
     double reciprocalf(double frac);	// reciprocal float
 }    
