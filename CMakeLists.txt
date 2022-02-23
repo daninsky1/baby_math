@@ -11,13 +11,13 @@ configure_file(BabyMathConfig.h.in BabyMathConfig.h)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 if (MSVC)
-    add_compile_options(/W4)
+    add_compile_options(/W4 /MTd)
 else()
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 # project generated libs
-add_library(baby_math
+add_library(baby_math STATIC
     src/bmath.cpp src/bmath.h
     src/fraction.cpp src/fraction.h)
 
@@ -34,16 +34,4 @@ if(UNIX)
 endif()
 
 # add gtest
-include(FetchContent)
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/heads/master.zip
-)
-if(MSVC)
-    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-endif()
-FetchContent_MakeAvailable(googletest)
-
-enable_testing()
-# test targets
 add_subdirectory(tests)
