@@ -5,3 +5,4 @@ msvc/
 .vscode/
 *.swp
 *.vim
+googletest/
