@@ -2,6 +2,7 @@
 
 #include <map>
 #include <ostream>
+#include <sstream>
 
 namespace bmath
 {
@@ -40,6 +41,9 @@ namespace bmath
         void simplify();
         Fraction reciprocal();
         double decimal();
+        // print
+        std::string strfy();
     };
     double reciprocalf(double frac);	// reciprocal float
 }    
+std::ostream& operator<<(std::ostream& os, bmath::Fraction frac);

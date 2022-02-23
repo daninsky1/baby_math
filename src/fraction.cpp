@@ -189,7 +189,14 @@ bmath::Fraction bmath::Fraction::reciprocal()
 
 double bmath::reciprocalf(double frac) { return 1 / frac; }
 
-std::ostream& operator<<(std::ostream& os, Fraction frac)
+std::ostream& operator<<(std::ostream& os, bmath::Fraction frac)
 {
     return os << frac.m_numerator << '/' << frac.m_denominator;
+}
+
+std::string bmath::Fraction::strfy()
+{
+    std::stringstream ss;
+    ss << static_cast<Fraction>(*this) << std::endl;
+    return ss.str();
 }
