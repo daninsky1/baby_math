@@ -156,11 +156,8 @@ void frac_is_eq()
 
 void fractions()
 {
-    std::vector<void(*)()> funcs = {
-        &fractions_add,
-        &fractions_sub,
-        &fractions_mult,
-        &fractions_div };
-
-    for (int i = 0; i < funcs.size(); ++i) funcs[i]();
+    fractions_add(),
+    fractions_sub(),
+    fractions_mult(),
+    fractions_div();
 }
