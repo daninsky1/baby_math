@@ -197,6 +197,6 @@ std::ostream& operator<<(std::ostream& os, bmath::Fraction frac)
 std::string bmath::Fraction::strfy()
 {
     std::stringstream ss;
-    ss << static_cast<Fraction>(*this) << std::endl;
+    ss << static_cast<Fraction>(*this);
     return ss.str();
 }
