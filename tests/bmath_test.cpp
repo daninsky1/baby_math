@@ -9,7 +9,7 @@
 #include <gtest/gtest.h>
 
 // bmath::absolute
-TEST(absoluteTest, SanityCheck)
+TEST(SanityCheck, absoluteTest)
 {
     EXPECT_EQ(bmath::absolute(-214748364), 214748364);
     EXPECT_EQ(bmath::absolute(-2147483647), 2147483647);
@@ -19,7 +19,7 @@ TEST(absoluteTest, SanityCheck)
 }
 
 // bmath::distance
-TEST(distanceTest, SanityCheck)
+TEST(SanityCheck, distanceTest)
 {
     EXPECT_EQ(bmath::distance(20, 20), 0);
     
@@ -44,7 +44,7 @@ TEST(distanceTest, SanityCheck)
 }
 
 // bmath::square bmath::cube
-TEST(squareTest, handlesSquareIntMax) {
+TEST(handlesSquareIntMax, squareTest) {
     EXPECT_ANY_THROW(bmath::square(static_cast<int64_t>(UINT32_MAX)+1));
     constexpr int64_t NUINT32_RANGE = static_cast<int64_t>(UINT32_MAX)*-1;     // "negative" uint 32 range size
     EXPECT_ANY_THROW(bmath::square(NUINT32_RANGE-1));
@@ -58,7 +58,7 @@ TEST(cubeTest, handlesCubeIntMax) {
     
 }
 
-TEST(benchmarkNaivePower, benchmark)
+TEST(benchmark, benchmarkNaivePower)
 {
     
 }
