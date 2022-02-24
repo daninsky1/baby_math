@@ -34,7 +34,6 @@ namespace bmath
     // long long int
     // unsigned int
     // unsigned long long int
-    
     uint64_t absolute(int64_t n);
     int64_t inverse(int64_t n);
     uint64_t distance(int64_t n1, int64_t n2);
@@ -44,9 +43,6 @@ namespace bmath
     int64_t naive_power(int32_t base, uint32_t exponent);
     int64_t power(int32_t base, uint32_t exponent);
     int64_t iter_power(int32_t base, uint32_t exponent);
-    
-    
-    
     
     double squared(double n);
     double cubed(double n);
@@ -75,12 +71,10 @@ namespace bmath
     
     inline int sgn(double n) { if (n < 0.0) return -1; else if (n > 0.0) return 1; else return 0; }
     inline int sgn(int n) { if (n < 0) return -1; else if (n > 0) return 1; else return 0; }
-
 }   // namespace bmath
 
 // TODO: use template parameter pack for
 // that can possibly have variable number of inputs such average
-
 
 // AVERAGE
 inline double average_impl(int& count, double& sum) { return sum / count; }
@@ -101,5 +95,3 @@ double bmath::average(Ts ... args)
     int count = 0;
     return average_impl(count, sum, args...);
 }
-
-// 
