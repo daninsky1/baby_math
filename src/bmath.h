@@ -17,6 +17,11 @@
 constexpr double HALF_PI = 1.570796326794896619231321691639751442;      // pi/2
 constexpr double PI      = 3.141592653589793238462643383279502884;           // pi
 constexpr double TWO_PI  = 3.141592653589793238462643383279502884 * 2;   // pi*2
+constexpr int prime_numbers[] = {
+     2,  3,  5,  7, 11, 13, 17, 19, 23, 29,
+    31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+    73, 79, 83, 89, 97
+};
 #endif
 //
 // BASIC EVALUATIONS
@@ -68,8 +73,8 @@ namespace bmath
     template<class ... Ts>
     double average(Ts ... args);
     
-    int sgn(double n) { if (n < 0.0) return -1; else if (n > 0.0) return 1; else return 0; }
-    int sgn(int n) { if (n < 0) return -1; else if (n > 0) return 1; else return 0; }
+    inline int sgn(double n) { if (n < 0.0) return -1; else if (n > 0.0) return 1; else return 0; }
+    inline int sgn(int n) { if (n < 0) return -1; else if (n > 0) return 1; else return 0; }
 
 }   // namespace bmath
 
