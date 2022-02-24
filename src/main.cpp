@@ -9,6 +9,7 @@
 #include "printv.h"
 #include "bmath.h"
 #include "fraction.h"
+#include "manual_tests.h"
 // #include "../BabyMathConfig.h"
 
 void sq_max_test();
@@ -28,6 +29,8 @@ int main(void)
     std::cout << value << std::endl;
     value = bmath::inverse(value);
     std::cout << value << std::endl;
+    
+    fractions();
 }
 //
 // MANUAL TESTS
