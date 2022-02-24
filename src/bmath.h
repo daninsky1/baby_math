@@ -67,6 +67,9 @@ namespace bmath
     bool is_coprime(int n1, int n2);
     template<class ... Ts>
     double average(Ts ... args);
+    
+    int sgn(double n) { if (n < 0.0) return -1; else if (n > 0.0) return 1; else return 0; }
+    int sgn(int n) { if (n < 0) return -1; else if (n > 0) return 1; else return 0; }
 
 }   // namespace bmath
 
